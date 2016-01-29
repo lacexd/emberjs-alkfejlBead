@@ -1,0 +1,24 @@
+<form method="post">
+    <input type="hidden" name="id" value="{{data.id}}">
+    <table class="table table-striped">
+        <tr>
+            <th>Description</th>
+            <td>
+                <textarea class="form-control" 
+                   name="text" id="text" 
+                   >{{data.text}}</textarea>
+            </td>
+        </tr>
+        
+
+    </table>
+    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <div class="form-group">
+            <button {{action "onSubmit"}} class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+</form>
+{{outlet}}

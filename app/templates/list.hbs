@@ -1,0 +1,36 @@
+<h1>Todos:</h1>
+<div id="comments" class="row">
+    {{#each model.todo as |todos|}}
+        <div class="col-sm-5">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                {{todos.text}}
+                </div>
+                {{#link-to "details" todos.id}}
+                <span class="btn btn-sm btn-info">
+                    <span>details</span>
+                </span>
+                {{/link-to}}
+                
+                {{#link-to "edit" todos.id}}
+                    <span class="btn btn-sm btn-info">
+                        <span>edit</span>
+                    </span>
+                {{/link-to}}
+                
+                {{#link-to "comment" todos.id}}
+                    <span class="btn btn-sm btn-info">
+                        <span>add comment</span>
+                    </span>
+                {{/link-to}}
+                
+                <button class="btn btn-sm btn-danger" {{action "deleteTodo" todos}} > delete
+                    {{!--<span class="glyphicon glyphicon-remove"></span>--}}
+                </button>
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+{{!--{{comment-form munkaId=model.munkaId onSave=(action "newComment")}}--}}
+{{outlet}}

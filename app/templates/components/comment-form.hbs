@@ -1,0 +1,19 @@
+<h3>New comment:</h3>
+<form method="post">
+    <input type="hidden" name="todoId" value="{{todoId}}">
+    <div class="form-group">
+      <label for="text" class="col-lg-2 control-label">Your comment: </label>
+      <div class="col-lg-10">
+        <textarea class="form-control" 
+               name="text" id="text" 
+               placeholder="Please describe your comment."></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <div class="form-group">
+            <button {{action "onSubmit"}} class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+</form>

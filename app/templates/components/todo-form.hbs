@@ -1,0 +1,15 @@
+<form class="form-horizontal" method="post">
+    <div class="form-group">
+      <label for="text" class="col-lg-2 control-label">Describe the task: </label>
+      <div class="col-lg-10">
+        <textarea class="form-control" 
+               name="text" id="text" 
+               placeholder="Please describe the task..."></textarea>
+      </div>
+    </div>
+
+        
+    <div class="form-group">
+        <button {{action "onSubmit"}} class="btn btn-primary">Submit</button>
+    </div>
+</form>
